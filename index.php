@@ -37,11 +37,7 @@
       Sistema sala de junta
 
       <small>Panel de control</small>
-    </h1>
-    <h6>
-      Calendario de <strong> <?php echo $_SESSION['usuario']; ?> </strong>
-      <small style="float:right"> <a href="logout.php">Cerrar Sesion</a> </small>
-    </h6>
+    </h>
       </section>
 
       <div class="row">
@@ -53,7 +49,7 @@
                   <h4 class="text-center">Eventos predefinidos</h4>
                   <div id="listaeventospredefinidos">
 
-                    
+
                      ?>
 
                   </div>
