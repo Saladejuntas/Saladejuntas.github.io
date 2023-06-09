@@ -1,10 +1,3 @@
-<?php
-  session_start();
-  if (!isset($_SESSION['usuario'])) {
-    header("Location:login.html");
-    exit(0);
-  }
-  ?>
   <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -60,20 +53,7 @@
                   <h4 class="text-center">Eventos predefinidos</h4>
                   <div id="listaeventospredefinidos">
 
-                    <?php
-
-                     require("conexion.php");
-                     $conexion = regresarConexion();
-
-                     $datos = mysqli_query($conexion, "SELECT id,titulo,horainicio,horafin,colortexto,colorfondo FROM eventospredefinidos");
-                     $ep = mysqli_fetch_all($datos, MYSQLI_ASSOC);
-
-                     foreach ($ep as $fila) {
-                       echo "<div class='fc-event' data-titulo='$fila[titulo]' data-horafin='$fila[horafin]' data-horainicio='$fila[horainicio]' data-colorfondo='$fila[colorfondo]' data-colortexto='$fila[colortexto]'
-                        style='border-color:$fila[colorfondo];color:$fila[colortexto];background-color:$fila[colorfondo];margin:10px'>
-                        $fila[titulo] [" . substr($fila['horainicio'],0,5) . " a " .substr($fila['horafin'],0,5) . "]</div>";
-                     }
-
+                    
                      ?>
 
                   </div>
